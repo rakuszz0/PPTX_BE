@@ -1,0 +1,9 @@
+{
+  "smoketest": {
+    "id": "u_715efab4b4a0",
+    "username": "smoketest",
+    "display_name": "Smoke Tester",
+    "role": "editor",
+    "password_hash": "56edff2f6affd055$b4d6ac56bd2c7cbd9cc21b4509510c2a6b718cb13ed319bf27030f36be148a69f9cf6ac03346eabbf6985f05202b2eb1b10ef49be9b954c74e74699c9c46ad78"
+  }
+}

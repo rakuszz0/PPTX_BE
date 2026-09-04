@@ -1,0 +1,633 @@
+{
+  "module_id": "mod_9fe81db4fa",
+  "title": "Pengantar Regulasi Perangkat Medis",
+  "slides": [
+    {
+      "id": "bp_3cde9ab5",
+      "slide_number": 1,
+      "purpose": "INTRODUCTION",
+      "layout": "TITLE",
+      "title": "Kepatuhan Regulasi untuk Perangkat Medis",
+      "main_message": "Panduan terstruktur untuk profesional kesehatan dan perangkat medis",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "title",
+          "content": {
+            "text": "Kepatuhan Regulasi untuk Perangkat Medis"
+          }
+        },
+        {
+          "type": "SUBTITLE",
+          "area": "subtitle",
+          "content": {
+            "text": "Pengantar Regulasi Perangkat Medis • Modul 1 • Dikti & Klinis"
+          }
+        },
+        {
+          "type": "BADGE",
+          "area": "meta",
+          "content": {
+            "text": "WIZAPE • Medical Theme",
+            "variant": "pill"
+          }
+        }
+      ],
+      "source_references": [
+        "module_01.title"
+      ],
+      "speaker_notes": [],
+      "density_hint": "BALANCED"
+    },
+    {
+      "id": "bp_18f023ed",
+      "slide_number": 2,
+      "purpose": "AGENDA",
+      "layout": "AGENDA",
+      "title": "Agenda Pembelajaran",
+      "main_message": "Alur belajar dari pengenalan hingga refleksi",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "heading",
+          "content": {
+            "text": "Agenda Pembelajaran"
+          }
+        },
+        {
+          "type": "BULLET_LIST",
+          "area": "item_1",
+          "items": [
+            {
+              "text": "Pendahuluan: mengapa regulasi ada",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "type": "BULLET_LIST",
+          "area": "item_2",
+          "items": [
+            {
+              "text": "Definisi & klasifikasi perangkat medis (Kelas A–D)",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "type": "BULLET_LIST",
+          "area": "item_3",
+          "items": [
+            {
+              "text": "Kerangka regulasi Indonesia & alur registrasi",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "type": "BULLET_LIST",
+          "area": "item_4",
+          "items": [
+            {
+              "text": "ISO 13485 & kewajiban pasca pemasaran",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "type": "BULLET_LIST",
+          "area": "item_5",
+          "items": [
+            {
+              "text": "Studi kasus, ringkasan & refleksi",
+              "level": 0
+            }
+          ]
+        }
+      ],
+      "source_references": [],
+      "speaker_notes": [],
+      "density_hint": "BALANCED"
+    },
+    {
+      "id": "bp_5183ddb5",
+      "slide_number": 3,
+      "purpose": "OBJECTIVES",
+      "layout": "OBJECTIVES",
+      "title": "Tujuan Pembelajaran",
+      "main_message": "Setelah modul ini, peserta mampu menjelaskan, mengklasifikasikan, menganalisis, menerapkan, dan mengevaluasi.",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "heading",
+          "content": {
+            "text": "Tujuan Pembelajaran"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "objective_1",
+          "variant": "card_primary",
+          "heading": "Menjelaskan",
+          "content": {
+            "heading": "Menjelaskan",
+            "text": "Definisi, lingkup, dan tujuan regulasi perangkat medis."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "objective_2",
+          "variant": "card_teal",
+          "heading": "Mengklasifikasikan",
+          "content": {
+            "heading": "Mengklasifikasikan",
+            "text": "Kelas risiko A, B, C, D beserta contoh produk masing-masing."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "objective_3",
+          "variant": "card_success",
+          "heading": "Menganalisis",
+          "content": {
+            "heading": "Menganalisis & Menerapkan",
+            "text": "Alur registrasi, izin edar, dan penerapan ISO 13485."
+          }
+        }
+      ],
+      "source_references": [
+        "module_01.section_01"
+      ],
+      "speaker_notes": [],
+      "density_hint": "BALANCED"
+    },
+    {
+      "id": "bp_af04f395",
+      "slide_number": 4,
+      "purpose": "CONCEPT",
+      "layout": "THREE_CARD",
+      "title": "Apa itu Perangkat Medis?",
+      "main_message": "Perangkat medis mencakup instrumen, mesin, implan, reagen in-vitro, dan aksesoris yang digunakan untuk tujuan medis.",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "heading",
+          "content": {
+            "text": "Apa itu Perangkat Medis?"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "card_1",
+          "variant": "card",
+          "content": {
+            "heading": "Definisi",
+            "text": "Instrumen, aparatus, mesin, implan, reagen in-vitro, perangkat lunak, atau bahan lain yang digunakan untuk diagnosis, pencegahan, pemantauan, pengobatan, atau rehabilitasi penyakit."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "card_2",
+          "variant": "card",
+          "content": {
+            "heading": "Bukan Obat",
+            "text": "Cara kerjanya tidak melalui farmakologis, imunologis, atau metabolisme. Jika efek utamanya dicapai secara fisik, mekanik, atau elektrik → perangkat medis."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "card_3",
+          "variant": "card",
+          "content": {
+            "heading": "Contoh",
+            "text": "Termometer, tensimeter, alat USG, stent jantung, prostetik, IVD (reagen tes cepat), MRI, perangkat lunak medis."
+          }
+        }
+      ],
+      "source_references": [
+        "module_01.section_02",
+        "reg_001"
+      ],
+      "speaker_notes": [
+        "Sumber: Definisi mengacu pada Permenkes dan panduan WHO/IMDRF categorization."
+      ],
+      "density_hint": "BALANCED"
+    },
+    {
+      "id": "bp_4fa69d3b",
+      "slide_number": 5,
+      "purpose": "CONCEPT",
+      "layout": "COMPARISON",
+      "title": "Klasifikasi Kelas Risiko",
+      "main_message": "Empat kelas risiko — dari rendah (A) sampai sangat tinggi (D) — menentukan ketatnya persyaratan.",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "heading",
+          "content": {
+            "text": "Klasifikasi Kelas Risiko"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "left_header",
+          "variant": "card_success",
+          "content": {
+            "heading": "Risiko Rendah → Sedang",
+            "text": ""
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "right_header",
+          "variant": "card_danger",
+          "content": {
+            "heading": "Risiko Tinggi → Sangat Tinggi",
+            "text": ""
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "left_row_1",
+          "variant": "card_success",
+          "content": {
+            "heading": "Kelas A (Risiko Rendah)",
+            "text": "Alat tanpa kontak tubuh / kontak sesaat. Contoh: kasa steril sekali pakai, bedah kertas, alat fisioterapi non-invasif."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "right_row_1",
+          "variant": "card_warning",
+          "content": {
+            "heading": "Kelas C (Risiko Tinggi)",
+            "text": "Perangkat invasif jangka pendek atau aktif mengirim energi. Contoh: kateter jantung, alat laser bedah, monitor pasien."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "left_row_2",
+          "variant": "card_teal",
+          "content": {
+            "heading": "Kelas B (Risiko Sedang)",
+            "text": "Kontak tubuh sementara / invasif singkat. Contoh: termometer elektronik, alat suntik, spuit, dressing luka."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "right_row_2",
+          "variant": "card_danger",
+          "content": {
+            "heading": "Kelas D (Risiko Sangat Tinggi)",
+            "text": "Alat yang menunjang/sustaining hidup, implan jangka panjang. Contoh: stent koroner, prostetik sendi, IVD darah manusia."
+          }
+        },
+        {
+          "type": "CALLOUT",
+          "area": "left_row_3",
+          "content": {
+            "text": "Kelas menentukan: dokumentasi yang harus disiapkan, uji klinis yang diperlukan, dan proses audit registrasi."
+          }
+        },
+        {
+          "type": "BADGE",
+          "area": "right_row_3",
+          "variant": "pill",
+          "content": {
+            "text": "Regulasi: Permenkes Tentang Klasifikasi"
+          }
+        }
+      ],
+      "source_references": [
+        "module_01.section_02",
+        "reg_001"
+      ],
+      "speaker_notes": [],
+      "density_hint": "BALANCED"
+    },
+    {
+      "id": "bp_c88457b2",
+      "slide_number": 6,
+      "purpose": "PROCESS",
+      "layout": "PROCESS",
+      "title": "Alur Registrasi & Izin Edar",
+      "main_message": "Sebelum beredar, setiap perangkat medis melalui tahapan pra-registrasi, evaluasi teknis, dan pemberian izin edar.",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "heading",
+          "content": {
+            "text": "Alur Registrasi & Izin Edar"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "step_1",
+          "variant": "card_primary",
+          "content": {
+            "heading": "1. Pra-Registrasi",
+            "text": "Klasifikasi produk, persiapan dokumen mutu & bukti kinerja, serta pendaftaran akun."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "step_2",
+          "variant": "card_teal",
+          "content": {
+            "heading": "2. Pengajuan",
+            "text": "Unggah dokumen: Technical File (STED), ISO 13485, uji klinis (bila diminta), dan pelabelan."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "step_3",
+          "variant": "card_success",
+          "content": {
+            "heading": "3. Evaluasi",
+            "text": "Review administratif, evaluasi kesesuaian, klarifikasi, dan/atau audit lapang jika diperlukan."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "step_4",
+          "variant": "card_warning",
+          "content": {
+            "heading": "4. Izin Edar",
+            "text": "Diterbitkan Sertifikat Izin Edar (SIE) dengan masa berlaku tertentu. Produsen wajib menjaga pasca pemasaran."
+          }
+        }
+      ],
+      "source_references": [
+        "module_01.section_03",
+        "reg_001"
+      ],
+      "speaker_notes": [],
+      "density_hint": "BALANCED"
+    },
+    {
+      "id": "bp_35ab3929",
+      "slide_number": 7,
+      "purpose": "EXPLANATION",
+      "layout": "TEXT_VISUAL",
+      "title": "Sistem Manajemen Mutu ISO 13485:2016",
+      "main_message": "ISO 13485 adalah standar SMM khusus untuk organisasi di rantai pasok perangkat medis; fokus pada keselamatan pasien dan konsistensi proses.",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "heading",
+          "content": {
+            "text": "ISO 13485:2016 • Sistem Manajemen Mutu"
+          }
+        },
+        {
+          "type": "BULLET_LIST",
+          "area": "text",
+          "items": [
+            {
+              "text": "Berbasis proses PDCA & Risk-based thinking",
+              "level": 0
+            },
+            {
+              "text": "Mencakup desain & pengembangan, pembelian, produksi, kontrol pengukuran",
+              "level": 0
+            },
+            {
+              "text": "Wajib terdokumentasi dan diaudit internal + sertifikasi badan",
+              "level": 0
+            },
+            {
+              "text": "Kewajiban terkait: traceability, kontrol dokumen, penanganan komplain",
+              "level": 0
+            },
+            {
+              "text": "Menjadi prasyarat utama pengajuan registrasi Kelas C dan D",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "type": "METRIC",
+          "area": "visual",
+          "content": {
+            "label": "Prasyarat Sertifikasi Kelas Tinggi",
+            "value": "ISO 13485"
+          }
+        }
+      ],
+      "source_references": [
+        "module_01.section_04",
+        "reg_002"
+      ],
+      "speaker_notes": [],
+      "density_hint": "BALANCED"
+    },
+    {
+      "id": "bp_d4816357",
+      "slide_number": 8,
+      "purpose": "EXPLANATION",
+      "layout": "TWO_COLUMN",
+      "title": "Kewajiban Pasca Pemasaran",
+      "main_message": "Pemasaran hanya permulaan. Produsen berkewajiban terus memantau keamanan dan kinerja produk.",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "heading",
+          "content": {
+            "text": "Kewajiban Pasca Pemasaran (Post-Market)"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "left",
+          "variant": "card_primary",
+          "content": {
+            "heading": "PMS & Vigilansi",
+            "text": "Program Post-Market Surveillance (PMS), pengumpulan data pengalaman lapangan, pelaporan kejadian tidak diinginkan (Adverse Event) ke otoritas."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "right",
+          "variant": "card_danger",
+          "content": {
+            "heading": "Field Safety Corrective Action",
+            "text": "Jika ditemukan risiko: FSCA (Recall, notifikasi pengguna, modifikasi instruksi). Semua harus terdokumentasi dan dilaporkan tepat waktu."
+          }
+        }
+      ],
+      "source_references": [
+        "module_01.section_05",
+        "reg_003"
+      ],
+      "speaker_notes": [
+        "Penting ditekankan: produsen bertanggung jawab selama masa pakai produk berada di pasar."
+      ],
+      "density_hint": "BALANCED"
+    },
+    {
+      "id": "bp_04012c7b",
+      "slide_number": 9,
+      "purpose": "CASE_STUDY",
+      "layout": "CASE_STUDY",
+      "title": "Studi Kasus Terpandu",
+      "main_message": "Terapkan teori regulasi dan klasifikasi pada dua kasus sederhana berikut.",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "heading",
+          "content": {
+            "text": "Studi Kasus Terpandu"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "scenario",
+          "variant": "card_teal",
+          "content": {
+            "heading": "Skenario",
+            "text": "Sebuah klinik berencana mengimpor (1) rapid tes antigen COVID-19 (IVD) dan (2) kateter urin sekali pakai. Identifikasi kelas masing-masing dan prasyarat utama sebelum peredaran."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "problem",
+          "variant": "card_warning",
+          "content": {
+            "heading": "Analisis Klasifikasi",
+            "text": "Rapid tes antigen tergolong IVD. Kateter urin adalah perangkat invasif kontak sementara (Kelas B). Tentukan jalur dokumen dan persyaratan evaluasi."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "solution",
+          "variant": "card_success",
+          "content": {
+            "heading": "Jawaban & Diskusi",
+            "text": "IVD dapat risiko menengah/tinggi. Keduanya perlu Izin Edar: technical file, bukti kinerja, label Bahasa Indonesia, serta kewajiban PMS setelah beredar."
+          }
+        }
+      ],
+      "source_references": [
+        "module_01.section_06"
+      ],
+      "speaker_notes": [],
+      "density_hint": "BALANCED"
+    },
+    {
+      "id": "bp_fa53ed43",
+      "slide_number": 10,
+      "purpose": "SUMMARY",
+      "layout": "SUMMARY",
+      "title": "Ringkasan Modul",
+      "main_message": "Tiga pesan kunci: pahami kelas risiko, ikuti alur registrasi yang benar, dan rawat kewajiban pasca pemasaran.",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "heading",
+          "content": {
+            "text": "Ringkasan Modul"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "point_1",
+          "variant": "card_primary",
+          "content": {
+            "heading": "Klasifikasi = Risiko",
+            "text": "Kelas A/B/C/D membedakan intensitas pengawasan: semakin tinggi risiko, semakin ketat prasyarat dan audit."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "point_2",
+          "variant": "card_teal",
+          "content": {
+            "heading": "Registrasi bukan \"sekadar admin\"",
+            "text": "Persiapan mutu (ISO 13485), technical file, dan bukti kinerja adalah proses substantif yang melindungi pasien."
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "point_3",
+          "variant": "card_success",
+          "content": {
+            "heading": "Kewajiban berlanjut setelah beredar",
+            "text": "PMS, vigilansi, dan FSCA harus menjadi budaya organisasi, bukan sekadar formalitas."
+          }
+        }
+      ],
+      "source_references": [],
+      "speaker_notes": [],
+      "density_hint": "BALANCED"
+    },
+    {
+      "id": "bp_86571d63",
+      "slide_number": 11,
+      "purpose": "QUIZ",
+      "layout": "QUIZ",
+      "title": "Refleksi & Kuis Formatif",
+      "main_message": "Uji pemahaman Anda sebelum lanjut ke modul berikutnya.",
+      "components": [
+        {
+          "type": "HEADING",
+          "area": "heading",
+          "content": {
+            "text": "Refleksi & Kuis Formatif"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "area": "question",
+          "content": {
+            "text": "Perangkat yang termasuk invasif, kontak dengan jaringan tubuh lebih dari 30 hari, dan berpotensi menunjang kehidupan, termasuk kelas risiko mana?"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "option_A",
+          "variant": "card",
+          "content": {
+            "heading": "A",
+            "text": "Kelas A (risiko rendah)"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "option_B",
+          "variant": "card",
+          "content": {
+            "heading": "B",
+            "text": "Kelas B (risiko sedang)"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "option_C",
+          "variant": "card_success",
+          "content": {
+            "heading": "C",
+            "text": "Kelas D (risiko sangat tinggi) ✓"
+          }
+        },
+        {
+          "type": "CARD",
+          "area": "option_D",
+          "variant": "card",
+          "content": {
+            "heading": "D",
+            "text": "Tidak perlu diklasifikasikan jika alat impor"
+          }
+        }
+      ],
+      "source_references": [],
+      "speaker_notes": [
+        "Jawaban yang benar: C. Perangkat invasif jangka panjang yang mendukung kehidupan masuk Kelas D."
+      ],
+      "density_hint": "BALANCED"
+    }
+  ],
+  "metadata": {
+    "provider": "mock_ai",
+    "slides_requested": 11
+  }
+}

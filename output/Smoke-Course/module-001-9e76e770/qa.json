@@ -1,0 +1,50 @@
+{
+  "overall_score": 92,
+  "scores": {
+    "content": 85,
+    "educational": 90,
+    "visual_hierarchy": 91,
+    "readability": 92,
+    "design_consistency": 100,
+    "editability": 100,
+    "technical_validity": 100
+  },
+  "passed": true,
+  "issues": [],
+  "checks": [
+    {
+      "domain": "content",
+      "slides": 11,
+      "score": 85
+    },
+    {
+      "domain": "educational",
+      "objectives": true,
+      "score": 90
+    },
+    {
+      "domain": "visual",
+      "layout_types": 11,
+      "score": 91
+    },
+    {
+      "domain": "readability",
+      "avg_words_per_slide": 46,
+      "score": 92
+    },
+    {
+      "domain": "consistency",
+      "font_count": 0,
+      "score": 100
+    },
+    {
+      "domain": "editability",
+      "score": 100
+    },
+    {
+      "domain": "technical",
+      "valid_components": 51,
+      "score": 100
+    }
+  ]
+}

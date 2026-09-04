@@ -1,0 +1,71 @@
+{
+  "id": "mod_515a1e8826",
+  "module_number": 1,
+  "title": "Pengantar Regulasi Perangkat Medis",
+  "summary": "Pengertian, tujuan, dan ruang lingkup regulasi perangkat medis di Indonesia beserta gambaran ekosistem.",
+  "sections": [
+    {
+      "id": "gen_e3472076",
+      "title": "Tujuan Modul",
+      "content_type": "SECTION",
+      "reg_type": "EXPLANATION",
+      "text": "Setelah mempelajari Modul 1 ini, peserta diharapkan mampu menjelaskan tujuan regulasi perangkat medis, memahami pihak-pihak yang terlibat, dan menerjemahkan urgensi kepatuhan dalam praktik sehari-hari.",
+      "subsections": [],
+      "source_ref": "mod_course_10534fd4c57f_001.sec_01",
+      "order": 1
+    },
+    {
+      "id": "gen_3c67acbf",
+      "title": "Latar Belakang",
+      "content_type": "SECTION",
+      "reg_type": "FACT",
+      "text": "Perangkat medis yang beredar di Indonesia berjumlah sangat beragam, mulai dari alat sederhana seperti termometer sampai teknologi tinggi seperti MRI dan perangkat lunak medis berbasis kecerdasan buatan. Keberagaman ini menuntut kerangka pengaturan yang mampu menjamin keamanan, khasiat/efektivitas, dan mutu tanpa menghambat inovasi. Negara-negara anggota WHO telah menyepakati Model List of Essential Medicines dan Essential Medical Devices sebagai acuan dasar untuk menjamin ketersediaan alat yang aman, terjangkau, dan tepat guna. Pengalaman regional menunjukkan bahwa pengawasan yang lemah dapat berakibat pada produk yang tidak memenuhi syarat, kejadian tidak diinginkan pada pasien, dan hilangnya kepercayaan masyarakat terhadap sistem kesehatan.",
+      "subsections": [],
+      "source_ref": "mod_course_10534fd4c57f_001.sec_02",
+      "order": 2
+    },
+    {
+      "id": "gen_b5888c88",
+      "title": "Tujuan Regulasi Perangkat Medis",
+      "content_type": "LIST",
+      "reg_type": "REGULATORY_REQUIREMENT",
+      "text": "Secara umum, regulasi perangkat medis mempunyai empat tujuan utama:\n1. Melindungi pasien dan pengguna dari risiko yang tidak dapat diterima.\n2. Menjamin kebenaran, kecukupan, dan keandalan informasi yang disampaikan produsen.\n3. Menciptakan lapangan persaingan usaha yang sehat dan setara bagi pelaku industri.\n4. Mendukung inovasi yang bertanggung jawab melalui jalur regulasi yang jelas dan dapat diikuti.",
+      "subsections": [],
+      "source_ref": "mod_course_10534fd4c57f_001.sec_03",
+      "order": 3
+    },
+    {
+      "id": "gen_6b26f70f",
+      "title": "Pihak Terkait dalam Ekosistem",
+      "content_type": "PARAGRAPH",
+      "reg_type": "EXPLANATION",
+      "text": "Ekosistem perangkat medis melibatkan produsen (pabrikan/importir/distributor), tenaga kesehatan, pasien, otoritas regulator (Kementerian Kesehatan, Badan Pengawas Obat dan Makanan jika diperlukan), asosiasi profesi, serta lembaga sertifikasi dan laboratorium uji. Kolaborasi antar pihak sangat penting: produsen mengajukan bukti ilmiah dan teknis, tenaga medis memberikan masukan penggunaan klinis, dan regulator melakukan evaluasi independen.",
+      "subsections": [],
+      "source_ref": "mod_course_10534fd4c57f_001.sec_04",
+      "order": 4
+    },
+    {
+      "id": "gen_da762705",
+      "title": "Prinsip Dasar Pengaturan",
+      "content_type": "CALLOUT",
+      "reg_type": "INTERPRETATION",
+      "text": "Prinsip yang harus selalu dipegang dalam setiap aspek regulasi adalah proporsionalitas (sesuai risiko), transparansi (dapat diikuti dan dipahami), konsistensi (tidak berubah-ubah), akuntabilitas, dan berbasis bukti (evidence-based decision making). Prinsip ini akan tercermin pada cara klasifikasi, alur registrasi, serta pengawasan pasca pemasaran.",
+      "subsections": [],
+      "source_ref": "mod_course_10534fd4c57f_001.sec_05",
+      "order": 5
+    },
+    {
+      "id": "gen_af0ceb02",
+      "title": "Kesimpulan Pendahuluan",
+      "content_type": "SECTION",
+      "reg_type": "EXPLANATION",
+      "text": "Modul berikutnya akan menjelaskan definisi dan klasifikasi yang akan menentukan tingkat pengawasan. Pahami dengan baik karena hampir seluruh proses administratif dan teknis dimulai dari penentuan kelas risiko yang tepat.",
+      "subsections": [],
+      "source_ref": "mod_course_10534fd4c57f_001.sec_06",
+      "order": 6
+    }
+  ],
+  "source_url": "https://example.com/2",
+  "word_count": 296,
+  "metadata": {}
+}

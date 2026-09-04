@@ -1,0 +1,614 @@
+{
+  "id": "course_10534fd4c57f",
+  "title": "Kepatuhan Regulasi untuk Perangkat Medis",
+  "source_url": "https://example.com/2",
+  "description": "Kursus komprehensif tentang regulasi perangkat medis di Indonesia: definisi, klasifikasi risiko, kerangka hukum, alur registrasi, ISO 13485, dan kewajiban pasca pemasaran.",
+  "modules": [
+    {
+      "id": "mod_course_10534fd4c57f_001",
+      "module_number": 1,
+      "title": "Pengantar Regulasi Perangkat Medis",
+      "summary": "Pengertian, tujuan, dan ruang lingkup regulasi perangkat medis di Indonesia beserta gambaran ekosistem.",
+      "sections": [
+        {
+          "id": "gen_e3472076",
+          "title": "Tujuan Modul",
+          "content_type": "SECTION",
+          "reg_type": "EXPLANATION",
+          "text": "Setelah mempelajari Modul 1 ini, peserta diharapkan mampu menjelaskan tujuan regulasi perangkat medis, memahami pihak-pihak yang terlibat, dan menerjemahkan urgensi kepatuhan dalam praktik sehari-hari.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_001.sec_01",
+          "order": 1
+        },
+        {
+          "id": "gen_3c67acbf",
+          "title": "Latar Belakang",
+          "content_type": "SECTION",
+          "reg_type": "FACT",
+          "text": "Perangkat medis yang beredar di Indonesia berjumlah sangat beragam, mulai dari alat sederhana seperti termometer sampai teknologi tinggi seperti MRI dan perangkat lunak medis berbasis kecerdasan buatan. Keberagaman ini menuntut kerangka pengaturan yang mampu menjamin keamanan, khasiat/efektivitas, dan mutu tanpa menghambat inovasi. Negara-negara anggota WHO telah menyepakati Model List of Essential Medicines dan Essential Medical Devices sebagai acuan dasar untuk menjamin ketersediaan alat yang aman, terjangkau, dan tepat guna. Pengalaman regional menunjukkan bahwa pengawasan yang lemah dapat berakibat pada produk yang tidak memenuhi syarat, kejadian tidak diinginkan pada pasien, dan hilangnya kepercayaan masyarakat terhadap sistem kesehatan.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_001.sec_02",
+          "order": 2
+        },
+        {
+          "id": "gen_b5888c88",
+          "title": "Tujuan Regulasi Perangkat Medis",
+          "content_type": "LIST",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Secara umum, regulasi perangkat medis mempunyai empat tujuan utama:\n1. Melindungi pasien dan pengguna dari risiko yang tidak dapat diterima.\n2. Menjamin kebenaran, kecukupan, dan keandalan informasi yang disampaikan produsen.\n3. Menciptakan lapangan persaingan usaha yang sehat dan setara bagi pelaku industri.\n4. Mendukung inovasi yang bertanggung jawab melalui jalur regulasi yang jelas dan dapat diikuti.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_001.sec_03",
+          "order": 3
+        },
+        {
+          "id": "gen_6b26f70f",
+          "title": "Pihak Terkait dalam Ekosistem",
+          "content_type": "PARAGRAPH",
+          "reg_type": "EXPLANATION",
+          "text": "Ekosistem perangkat medis melibatkan produsen (pabrikan/importir/distributor), tenaga kesehatan, pasien, otoritas regulator (Kementerian Kesehatan, Badan Pengawas Obat dan Makanan jika diperlukan), asosiasi profesi, serta lembaga sertifikasi dan laboratorium uji. Kolaborasi antar pihak sangat penting: produsen mengajukan bukti ilmiah dan teknis, tenaga medis memberikan masukan penggunaan klinis, dan regulator melakukan evaluasi independen.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_001.sec_04",
+          "order": 4
+        },
+        {
+          "id": "gen_da762705",
+          "title": "Prinsip Dasar Pengaturan",
+          "content_type": "CALLOUT",
+          "reg_type": "INTERPRETATION",
+          "text": "Prinsip yang harus selalu dipegang dalam setiap aspek regulasi adalah proporsionalitas (sesuai risiko), transparansi (dapat diikuti dan dipahami), konsistensi (tidak berubah-ubah), akuntabilitas, dan berbasis bukti (evidence-based decision making). Prinsip ini akan tercermin pada cara klasifikasi, alur registrasi, serta pengawasan pasca pemasaran.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_001.sec_05",
+          "order": 5
+        },
+        {
+          "id": "gen_af0ceb02",
+          "title": "Kesimpulan Pendahuluan",
+          "content_type": "SECTION",
+          "reg_type": "EXPLANATION",
+          "text": "Modul berikutnya akan menjelaskan definisi dan klasifikasi yang akan menentukan tingkat pengawasan. Pahami dengan baik karena hampir seluruh proses administratif dan teknis dimulai dari penentuan kelas risiko yang tepat.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_001.sec_06",
+          "order": 6
+        }
+      ],
+      "source_url": "https://example.com/2",
+      "word_count": 296,
+      "metadata": {
+        "intro": "Pembukaan kursus: mengapa regulasi menjadi tulang punggung keselamatan pasien dan kepercayaan publik."
+      }
+    },
+    {
+      "id": "mod_course_10534fd4c57f_002",
+      "module_number": 2,
+      "title": "Definisi dan Klasifikasi Kelas Risiko",
+      "summary": "Membedah definisi perangkat medis dan sistem klasifikasi risiko kelas A, B, C, D beserta contoh.",
+      "sections": [
+        {
+          "id": "gen_a4b95ad3",
+          "title": "Tinjauan",
+          "content_type": "SECTION",
+          "reg_type": "EXPLANATION",
+          "text": "Definisi perangkat medis mengikuti acuan internasional (GHTF, IMDRF) yang kemudian diadaptasi dalam peraturan nasional.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_002.sec_01",
+          "order": 1
+        },
+        {
+          "id": "gen_1ed647cd",
+          "title": "Definisi Formal",
+          "content_type": "HEADING",
+          "reg_type": "FACT",
+          "text": "Perangkat medis adalah instrumen, aparatus, mesin, implan, reagen in-vitro, perangkat lunak, bahan, atau artikel lain yang digunakan pada manusia untuk salah satu tujuan berikut: diagnosis, pencegahan, pemantauan, pengobatan atau peredaan penyakit; investigasi, penggantian, atau modifikasi anatomi atau proses fisiologis; pengendalian kehamilan; serta dukungan atau penyokong kehidupan. Ciri khas: efek utama yang diinginkan TIDAK dicapai dengan cara farmakologis, imunologis, atau metabolisme, meskipun cara tersebut dapat membantu.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_002.sec_02",
+          "order": 2
+        },
+        {
+          "id": "gen_8ce4688c",
+          "title": "Membedakan dengan Obat",
+          "content_type": "PARAGRAPH",
+          "reg_type": "INTERPRETATION",
+          "text": "Jika efek utama produk dicapai melalui mekanisme farmakologis pada reseptor atau proses metabolik, produk tersebut dikategorikan sebagai obat atau biologis. Sebaliknya, jika mekanisme utamanya fisik, mekanik, termal, radiasi, atau elektrikal, maka termasuk perangkat medis. Beberapa produk kombinasi memiliki jalur khusus dan harus dikonsultasikan lebih lanjut ke otoritas.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_002.sec_03",
+          "order": 3
+        },
+        {
+          "id": "gen_846823ad",
+          "title": "Prinsip Klasifikasi Berbasis Risiko",
+          "content_type": "PARAGRAPH",
+          "reg_type": "EXPLANATION",
+          "text": "Risiko adalah fungsi dari tingkat keparahan bahaya, durasi kontak dengan tubuh, status invasif, serta apakah alat aktif mengirimkan energi atau obat. Semakin besar potensi bahaya, semakin tinggi kelas dan semakin ketat persyaratan evaluasi serta audit.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_002.sec_04",
+          "order": 4
+        },
+        {
+          "id": "gen_9ef3074e",
+          "title": "Kelas A — Risiko Rendah",
+          "content_type": "SECTION",
+          "reg_type": "EXAMPLE",
+          "text": "Alat tanpa kontak dengan pasien atau kontak sesaat pada kulit yang utuh, misalnya: kasa steril sekali pakai, alat bantu jalan non-invasif, peralatan fisioterapi yang tidak menembus kulit.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_002.sec_05",
+          "order": 5
+        },
+        {
+          "id": "gen_3583f901",
+          "title": "Kelas B — Risiko Sedang",
+          "content_type": "SECTION",
+          "reg_type": "EXAMPLE",
+          "text": "Kontak sementara dengan jaringan, selaput lendir, atau invasif singkat. Contoh: jarum suntik, spuit, termometer elektronik, perban kontak luka, kateter urin jangka pendek.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_002.sec_06",
+          "order": 6
+        },
+        {
+          "id": "gen_8c2972ec",
+          "title": "Kelas C — Risiko Tinggi",
+          "content_type": "SECTION",
+          "reg_type": "EXAMPLE",
+          "text": "Perangkat invasif jangka pendek atau aktif yang mengirimkan energi dengan bahaya potensial. Contoh: kateter intravaskuler jangka pendek, alat laser bedah, alat anestesi, monitor fisiologis kritis.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_002.sec_07",
+          "order": 7
+        },
+        {
+          "id": "gen_914e0f36",
+          "title": "Kelas D — Risiko Sangat Tinggi",
+          "content_type": "SECTION",
+          "reg_type": "EXAMPLE",
+          "text": "Perangkat invasif jangka panjang atau yang secara langsung menunjang kehidupan (life-supporting/life-sustaining). Contoh: stent koroner, katup jantung prostetik, sendi buatan implan, IVD yang menguji darah manusia untuk penyakit menular kritis, pacemaker.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_002.sec_08",
+          "order": 8
+        },
+        {
+          "id": "gen_71006c1c",
+          "title": "Matriks Keputusan Klasifikasi",
+          "content_type": "CALLOUT",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Dalam praktik, klasifikasi ditentukan melalui matriks aturan yang memperhitungkan invasif, durasi kontak, aktif vs non-aktif, bagian tubuh yang terkontak, dan apakah alat mengandung zat obat. Baca panduan klasifikasi resmi otoritas dan dokumentasikan rationale klasifikasi Anda.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_002.sec_09",
+          "order": 9
+        }
+      ],
+      "source_url": "https://example.com/2",
+      "word_count": 300,
+      "metadata": {
+        "intro": "Klasifikasi yang tepat adalah titik awal perencanaan registrasi dan mutu."
+      }
+    },
+    {
+      "id": "mod_course_10534fd4c57f_003",
+      "module_number": 3,
+      "title": "Kerangka Hukum dan Badan Regulatori",
+      "summary": "Ulasan UU Kesehatan, Permenkes, dan peran Kementerian Kesehatan dalam pengawasan alat kesehatan.",
+      "sections": [
+        {
+          "id": "gen_39d41ed2",
+          "title": "Dasar Hukum",
+          "content_type": "REGULATION",
+          "reg_type": "FACT",
+          "text": "Hierarki peraturan di Indonesia dimulai dari UUD 1945, UU, Peraturan Pemerintah, Peraturan Presiden, hingga Peraturan Menteri Kesehatan.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_003.sec_01",
+          "order": 1
+        },
+        {
+          "id": "gen_5a6d7c3e",
+          "title": "Undang-Undang Kesehatan",
+          "content_type": "SECTION",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "UU tentang Kesehatan mengatur secara umum hak dan kewajiban dalam pelayanan kesehatan, termasuk jaminan keamanan dan mutu sediaan farmasi dan alat kesehatan.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_003.sec_02",
+          "order": 2
+        },
+        {
+          "id": "gen_d4a97b14",
+          "title": "Peraturan Menteri Kesehatan",
+          "content_type": "SECTION",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Permenkes menjadi instrumen teknis utama yang mengatur detail klasifikasi, registrasi, pelabelan, pengawasan, dan vigilansi perangkat medis. Ikuti versi terbaru karena regulasi berkembang mengikuti kemajuan teknologi dan harmonisasi standar regional.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_003.sec_03",
+          "order": 3
+        },
+        {
+          "id": "gen_5d444fb8",
+          "title": "Peran Kementerian Kesehatan",
+          "content_type": "PARAGRAPH",
+          "reg_type": "EXPLANATION",
+          "text": "Kementerian Kesehatan menyelenggarakan kebijakan nasional, melakukan evaluasi registrasi, pengawasan distribusi, serta pengelolaan sistem informasi alat kesehatan. Setiap tahapan didukung oleh pedoman dan petunjuk teknis.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_003.sec_04",
+          "order": 4
+        },
+        {
+          "id": "gen_9cf925dd",
+          "title": "Badan Sertifikasi dan Akreditasi",
+          "content_type": "PARAGRAPH",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Lembaga sertifikasi penilai kesesuaian ISO 13485 harus terakreditasi; laboratorium uji juga harus memiliki akreditasi yang relevan sesuai parameter yang diuji. Produsen bertanggung jawab memastikan lembaga yang dipilih memiliki kewenangan.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_003.sec_05",
+          "order": 5
+        }
+      ],
+      "source_url": "https://example.com/2",
+      "word_count": 121,
+      "metadata": {
+        "intro": "Dari hierarki peraturan hingga wewenang otoritas."
+      }
+    },
+    {
+      "id": "mod_course_10534fd4c57f_004",
+      "module_number": 4,
+      "title": "Alur Registrasi dan Izin Edar",
+      "summary": "Tahapan pra-registrasi, evaluasi, sampai dengan terbitnya Sertifikat Izin Edar.",
+      "sections": [
+        {
+          "id": "gen_07a9715d",
+          "title": "Ringkasan Alur",
+          "content_type": "SECTION",
+          "reg_type": "EXPLANATION",
+          "text": "Registrasi adalah proses evaluasi administratif dan teknis untuk memutuskan kelayakan izin edar.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_004.sec_01",
+          "order": 1
+        },
+        {
+          "id": "gen_13eb730f",
+          "title": "Tahap 1: Pra-Registrasi",
+          "content_type": "PARAGRAPH",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Sebelum pengajuan formal, produsen perlu melakukan: (1) self-assessment klasifikasi; (2) menyiapkan bukti kinerja dan keamanan (literatur, uji klinis bila perlu); (3) memastikan SMM sudah berjalan sesuai target sertifikasi; (4) menyiapkan draf label dan informasi pengguna.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_004.sec_02",
+          "order": 2
+        },
+        {
+          "id": "gen_4b5522cc",
+          "title": "Tahap 2: Pengajuan dan Pembayaran",
+          "content_type": "PARAGRAPH",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Melalui portal resmi otoritas, produsen mengunggah dokumen, mengisi formulir deskripsi produk, dan melunasi biaya pengujian/evaluasi sesuai kelas. Pastikan kelengkapan administrasi agar tidak dikembalikan pada tahap awal.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_004.sec_03",
+          "order": 3
+        },
+        {
+          "id": "gen_11787464",
+          "title": "Tahap 3: Evaluasi Administratif dan Teknis",
+          "content_type": "PARAGRAPH",
+          "reg_type": "EXPLANATION",
+          "text": "Petugas memeriksa kelengkapan dan konsistensi dokumen. Jika kurang, klarifikasi diminta dalam batas waktu. Untuk kelas tinggi, evaluasi teknis mendalam dapat melibatkan reviewer ahli klinis/teknik serta audit lapang.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_004.sec_04",
+          "order": 4
+        },
+        {
+          "id": "gen_3f33fcb1",
+          "title": "Tahap 4: Penerbitan Izin Edar",
+          "content_type": "PARAGRAPH",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Jika lulus evaluasi, diterbitkan Sertifikat Izin Edar (SIE) dengan masa berlaku tertentu. Produsen wajib menampilkan nomor SIE dalam label dan materi promosi sesuai aturan.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_004.sec_05",
+          "order": 5
+        },
+        {
+          "id": "gen_dab37ff4",
+          "title": "Perubahan Setelah Izin Edar",
+          "content_type": "CALLOUT",
+          "reg_type": "INTERPRETATION",
+          "text": "Setiap perubahan desain, bahan, label, atau indikasi memerlukan notifikasi atau pengajuan perubahan izin. Jangan mengubah tanpa memastikan kebutuhan regulasi telah dipenuhi.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_004.sec_06",
+          "order": 6
+        }
+      ],
+      "source_url": "https://example.com/2",
+      "word_count": 145,
+      "metadata": {
+        "intro": "Bagaimana sebuah perangkat medis dilegalkan untuk beredar."
+      }
+    },
+    {
+      "id": "mod_course_10534fd4c57f_005",
+      "module_number": 5,
+      "title": "ISO 13485 dan Sistem Manajemen Mutu",
+      "summary": "Standar manajemen mutu khusus industri perangkat medis dan implikasi implementasinya.",
+      "sections": [
+        {
+          "id": "gen_c9e5a5e4",
+          "title": "Apa itu ISO 13485?",
+          "content_type": "SECTION",
+          "reg_type": "FACT",
+          "text": "ISO 13485 adalah standar internasional Sistem Manajemen Mutu yang khusus untuk organisasi di rantai pasok perangkat medis. Berlaku untuk desain, produksi, instalasi, dan servis.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_005.sec_01",
+          "order": 1
+        },
+        {
+          "id": "gen_9cdc9fc3",
+          "title": "Konteks Organisasi dan Risk-Based Thinking",
+          "content_type": "PARAGRAPH",
+          "reg_type": "EXPLANATION",
+          "text": "Identifikasi risiko yang relevan dengan mutu dan keselamatan pasien; terapkan pemikiran berbasis risiko pada seluruh proses. Pendekatan ini juga sejalan dengan pedoman manajemen risiko ISO 14971.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_005.sec_02",
+          "order": 2
+        },
+        {
+          "id": "gen_14641f92",
+          "title": "Proses Utama",
+          "content_type": "LIST",
+          "reg_type": "EXPLANATION",
+          "text": "Pengembangan desain dan pengembangan (DHF/DMR), pengendalian dokumen dan catatan, pembelian dan kendali pemasok, produksi, sterilisasi, validasi proses, penanganan komplain, CAPA, audit internal, serta tinjauan manajemen.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_005.sec_03",
+          "order": 3
+        },
+        {
+          "id": "gen_bbd7d4e3",
+          "title": "Traceability",
+          "content_type": "PARAGRAPH",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Kemampuan menelusur (traceability) mulai dari komponen baku sampai unit yang terpasang pada pasien adalah keharusan untuk investigasi recall dan kaji-ulang keamanan.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_005.sec_04",
+          "order": 4
+        },
+        {
+          "id": "gen_2340669c",
+          "title": "Siklus Sertifikasi",
+          "content_type": "PARAGRAPH",
+          "reg_type": "EXPLANATION",
+          "text": "Sertifikat biasanya berlaku 3 tahun dengan audit survailans setiap tahunnya. Kesiapan dokumen dan konsistensi implementasi sangat menentukan hasil audit.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_005.sec_05",
+          "order": 5
+        }
+      ],
+      "source_url": "https://example.com/2",
+      "word_count": 115,
+      "metadata": {
+        "intro": "Membangun budaya mutu yang konsisten."
+      }
+    },
+    {
+      "id": "mod_course_10534fd4c57f_006",
+      "module_number": 6,
+      "title": "Pelabelan, Iklan, dan Promosi",
+      "summary": "Persyaratan label: informasi, bahasa, serta aturan promosi dan iklan yang etis.",
+      "sections": [
+        {
+          "id": "gen_0296059e",
+          "title": "Prinsip Pelabelan",
+          "content_type": "SECTION",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Label harus akurat, tidak menyesatkan, dan memuat semua informasi yang dibutuhkan pengguna.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_006.sec_01",
+          "order": 1
+        },
+        {
+          "id": "gen_53eb9a6b",
+          "title": "Bahasa dan Informasi Wajib",
+          "content_type": "PARAGRAPH",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Label perangkat medis di Indonesia minimal menyertakan Bahasa Indonesia. Informasi yang harus ada: nama dagang/nama generik, produsen/importir, nomor izin edar, nomor batch/lot, tanggal kedaluwarsa, indikasi, kontraindikasi, peringatan, dan cara penyimpanan.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_006.sec_02",
+          "order": 2
+        },
+        {
+          "id": "gen_1e16485b",
+          "title": "Iklan dan Promosi",
+          "content_type": "PARAGRAPH",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Promosi dan iklan tidak boleh menyampaikan klaim yang melampaui indikasi yang disetujui dalam izin edar. Semua pernyataan khasiat harus didukung bukti ilmiah dan ditulis secara etis.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_006.sec_03",
+          "order": 3
+        },
+        {
+          "id": "gen_5c5947c7",
+          "title": "Pembatasan Khusus",
+          "content_type": "CALLOUT",
+          "reg_type": "INTERPRETATION",
+          "text": "Beberapa perangkat tertentu hanya boleh dipromosikan kepada tenaga kesehatan yang memenuhi kualifikasi; diskusikan dengan tim legal/regulatory sebelum menerbitkan materi promosi.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_006.sec_04",
+          "order": 4
+        }
+      ],
+      "source_url": "https://example.com/2",
+      "word_count": 88,
+      "metadata": {
+        "intro": "Komunikasi yang akurat dan bertanggung jawab."
+      }
+    },
+    {
+      "id": "mod_course_10534fd4c57f_007",
+      "module_number": 7,
+      "title": "Pasca Pemasaran dan Vigilansi",
+      "summary": "PMS, pelaporan kejadian tidak diinginkan, FSCA, serta peran recall dalam pengawasan.",
+      "sections": [
+        {
+          "id": "gen_bb5a3269",
+          "title": "Mengapa Pasca Pemasaran Penting?",
+          "content_type": "SECTION",
+          "reg_type": "EXPLANATION",
+          "text": "Pengalaman penggunaan pada populasi nyata dapat mengungkap kejadian yang tidak muncul pada studi klinis berukuran terbatas.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_007.sec_01",
+          "order": 1
+        },
+        {
+          "id": "gen_21bac803",
+          "title": "Post-Market Surveillance (PMS)",
+          "content_type": "PARAGRAPH",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Produsen wajib menyusun dan memelihara rencana PMS: mengumpulkan data keluhan, publikasi ilmiah, dan pengalaman pengguna; kemudian menganalisis secara sistematis.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_007.sec_02",
+          "order": 2
+        },
+        {
+          "id": "gen_c5570575",
+          "title": "Pelaporan Kejadian Tidak Diinginkan",
+          "content_type": "PARAGRAPH",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "Setiap kejadian yang dapat menyebabkan atau berpotensi menyebabkan kematian atau kerusakan kesehatan serius harus dilaporkan ke otoritas dalam jangka waktu yang ditentukan.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_007.sec_03",
+          "order": 3
+        },
+        {
+          "id": "gen_ad0129cc",
+          "title": "FSCA & Recall",
+          "content_type": "PARAGRAPH",
+          "reg_type": "REGULATORY_REQUIREMENT",
+          "text": "FSCA (Field Safety Corrective Action) mencakup recall produk, notifikasi pengguna, modifikasi label atau perangkat lunak, serta penghentian penjualan. Rencanakan komunikasi dan logistik dengan matang.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_007.sec_04",
+          "order": 4
+        }
+      ],
+      "source_url": "https://example.com/2",
+      "word_count": 81,
+      "metadata": {
+        "intro": "Kewajiban setelah izin edar diterbitkan."
+      }
+    },
+    {
+      "id": "mod_course_10534fd4c57f_008",
+      "module_number": 8,
+      "title": "Audit dan Kepatuhan",
+      "summary": "Jenis audit, kesiapan produsen, dan praktik kepatuhan berkelanjutan.",
+      "sections": [
+        {
+          "id": "gen_8a59fed8",
+          "title": "Jenis Audit",
+          "content_type": "SECTION",
+          "reg_type": "EXPLANATION",
+          "text": "Internal, eksternal (sertifikasi), dan audit dari otoritas.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_008.sec_01",
+          "order": 1
+        },
+        {
+          "id": "gen_e03b0b17",
+          "title": "Kesiapan Audit",
+          "content_type": "PARAGRAPH",
+          "reg_type": "EXPLANATION",
+          "text": "Pastikan dokumen mutu terkendali, catatan lengkap, CAPA tertutup, personel memahami prosedur, dan area produksi sesuai tata laksana ruang.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_008.sec_02",
+          "order": 2
+        },
+        {
+          "id": "gen_49bdd70d",
+          "title": "Penanganan Temuan",
+          "content_type": "PARAGRAPH",
+          "reg_type": "EXPLANATION",
+          "text": "Klasifikasikan temuan, tentukan akar permasalahan, susun rencana aksi perbaikan dan pencegahan (CAPA) dengan batas waktu yang realistis.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_008.sec_03",
+          "order": 3
+        }
+      ],
+      "source_url": "https://example.com/2",
+      "word_count": 42,
+      "metadata": {
+        "intro": "Menjaga kinerja sistem di atas kertas."
+      }
+    },
+    {
+      "id": "mod_course_10534fd4c57f_009",
+      "module_number": 9,
+      "title": "Perangkat Lunak Medis dan AI",
+      "summary": "Klasifikasi SaMD (Software as a Medical Device) dan algoritma AI sebagai perangkat medis.",
+      "sections": [
+        {
+          "id": "gen_789ab8f8",
+          "title": "SaMD dan AI",
+          "content_type": "SECTION",
+          "reg_type": "EXPLANATION",
+          "text": "Perangkat lunak yang dimaksudkan untuk tujuan medis (Software as a Medical Device / SaMD) diklasifikasikan menggunakan aturan khusus. Semakin tinggi dampak pada kondisi pasien, semakin tinggi kelasnya.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_009.sec_01",
+          "order": 1
+        },
+        {
+          "id": "gen_59bf46c9",
+          "title": "Risiko AI/ML",
+          "content_type": "CALLOUT",
+          "reg_type": "INTERPRETATION",
+          "text": "Algoritma yang dapat berubah setelah pemasaran (adaptive AI) membutuhkan rencana perubahan terkendali dan monitor kinerja berkelanjutan guna memastikan tidak terjadi penyimpangan performa.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_009.sec_02",
+          "order": 2
+        }
+      ],
+      "source_url": "https://example.com/2",
+      "word_count": 49,
+      "metadata": {
+        "intro": "Menjawab tantangan digitalisasi."
+      }
+    },
+    {
+      "id": "mod_course_10534fd4c57f_010",
+      "module_number": 10,
+      "title": "Studi Kasus dan Praktik Terbaik",
+      "summary": "Contoh kasus riil: registrasi, penyelesaian temuan audit, dan strategi recall.",
+      "sections": [
+        {
+          "id": "gen_11464437",
+          "title": "Pendekatan Studi Kasus",
+          "content_type": "SECTION",
+          "reg_type": "EXPLANATION",
+          "text": "Setiap kasus diawali dengan pengenalan konteks, identifikasi masalah, analisis akar, serta usulan tindakan.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_010.sec_01",
+          "order": 1
+        },
+        {
+          "id": "gen_81684a58",
+          "title": "Kasus 1: Registrasi Alat Diagnostik",
+          "content_type": "CALLOUT",
+          "reg_type": "EXAMPLE",
+          "text": "Tugas: tim Anda harus mengajukan izin edar untuk IVD baru. Buatlah daftar periksa dokumen dan tahapan evaluasi.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_010.sec_02",
+          "order": 2
+        },
+        {
+          "id": "gen_ccbb7d30",
+          "title": "Kasus 2: Investigasi Komplain dan Recall",
+          "content_type": "CALLOUT",
+          "reg_type": "EXAMPLE",
+          "text": "Tugas: merespons temuan 20 unit alat infus yang menunjukkan alarm gagal. Buat tahapan investigasi dan keputusan FSCA.",
+          "subsections": [],
+          "source_ref": "mod_course_10534fd4c57f_010.sec_03",
+          "order": 3
+        }
+      ],
+      "source_url": "https://example.com/2",
+      "word_count": 47,
+      "metadata": {
+        "intro": "Belajar dari pengalaman lapangan."
+      }
+    }
+  ],
+  "author": "WIZAPE Academy — Tim Kedokteran & Regulatori",
+  "metadata": {
+    "source": "wizape_extractor_mock",
+    "modules_detected": 10
+  },
+  "extracted_at": "2026-09-04T06:09:33.498538"
+}

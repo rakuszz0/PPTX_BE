@@ -20,7 +20,7 @@ def _ensure_dirs() -> None:
 
 async def _async_demo(url: str, module: int, min_slides: int, max_slides: int, theme: str) -> int:
     from uuid import uuid4
-    from datetime import datetime
+    from datetime import UTC, datetime
 
     from app.database.models import Course, Job
     from app.database.session import get_session
@@ -36,8 +36,8 @@ async def _async_demo(url: str, module: int, min_slides: int, max_slides: int, t
             source_url=url,
             project_id=None,
             status="CREATED",
-            created_at=datetime.utcnow(),
-            updated_at=datetime.utcnow(),
+            created_at=datetime.now(UTC),
+            updated_at=datetime.now(UTC),
         )
         sess.add(course)
         sess.commit()
@@ -58,8 +58,8 @@ async def _async_demo(url: str, module: int, min_slides: int, max_slides: int, t
                 "theme": theme,
             },
             created_by="cli",
-            created_at=datetime.utcnow(),
-            updated_at=datetime.utcnow(),
+            created_at=datetime.now(UTC),
+            updated_at=datetime.now(UTC),
         )
         sess.add(job)
         sess.commit()

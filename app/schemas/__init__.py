@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import Any, Dict, List, Optional, Literal
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 from pydantic import BaseModel, Field, ConfigDict
 
@@ -20,7 +20,7 @@ class HealthResponse(BaseModel):
     status: Literal["ok"] = "ok"
     app_env: str
     version: str = "0.1.0"
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
 
 class CourseCreate(BaseModel):
@@ -177,4 +177,4 @@ class JobEvent(BaseModel):
     stage: Optional[str] = None
     progress: Optional[int] = None
     message: Optional[str] = None
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(UTC))

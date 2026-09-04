@@ -7,7 +7,9 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
     APP_ENV: str = "development"
-    DATABASE_URL: str = "sqlite:///./data/app.db"
+    # SQLAlchemy URL for PostgreSQL.  Override this through DATABASE_URL in
+    # deployments (for example, with a managed PostgreSQL connection string).
+    DATABASE_URL: str = "postgresql+psycopg://postgres:postgres@localhost:5432/wizape_presentation"
     AI_PROVIDER: str = "mock"
     AI_MODEL: str = ""
     AI_API_KEY: str = ""

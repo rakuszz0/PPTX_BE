@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Any, Dict, List, Optional
 from pydantic import BaseModel, Field
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 
 
@@ -55,7 +55,7 @@ class CourseDocument(BaseModel):
     modules: List[CourseModule] = Field(default_factory=list)
     author: Optional[str] = None
     metadata: Dict[str, Any] = Field(default_factory=dict)
-    extracted_at: datetime = Field(default_factory=datetime.utcnow)
+    extracted_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
     def get_module(self, module_number: int) -> Optional[CourseModule]:
         for m in self.modules:

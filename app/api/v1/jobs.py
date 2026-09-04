@@ -1,6 +1,6 @@
 from typing import List, Optional
 from uuid import uuid4
-from datetime import datetime
+from datetime import UTC, datetime
 
 from fastapi import APIRouter, Depends, status, BackgroundTasks
 from sqlalchemy.orm import Session
@@ -54,8 +54,8 @@ async def create_job(
             "theme": payload.theme or "medical_professional",
         },
         created_by="dev_user_001",
-        created_at=datetime.utcnow(),
-        updated_at=datetime.utcnow(),
+        created_at=datetime.now(UTC),
+        updated_at=datetime.now(UTC),
     )
     db.add(job)
     db.commit()
@@ -105,7 +105,7 @@ async def resume_job(
     if job.status not in (JobStatus.FAILED, JobStatus.RETRYING):
         raise JobStateError(f"Cannot resume job in state {job.status}")
     job.status = JobStatus.RETRYING
-    job.updated_at = datetime.utcnow()
+    job.updated_at = datetime.now(UTC)
     db.commit()
     db.refresh(job)
     background_tasks.add_task(_run_job, job_id)
@@ -130,8 +130,8 @@ async def cancel_job(job_id: str, db: Session = Depends(get_db)) -> JobResponse:
         raise JobStateError(f"Cannot cancel job in terminal state {job.status}")
     job.status = JobStatus.FAILED
     job.error_message = "Cancelled by user"
-    job.updated_at = datetime.utcnow()
-    job.completed_at = datetime.utcnow()
+    job.updated_at = datetime.now(UTC)
+    job.completed_at = datetime.now(UTC)
     db.commit()
     db.refresh(job)
     return JobResponse.model_validate(job)

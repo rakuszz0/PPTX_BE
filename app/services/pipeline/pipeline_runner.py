@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Any, Dict, Optional, List
 from uuid import uuid4
-from datetime import datetime
+from datetime import UTC, datetime
 import asyncio
 import os
 import json
@@ -33,7 +33,7 @@ logger = get_logger(__name__)
 
 
 def _now() -> datetime:
-    return datetime.utcnow()
+    return datetime.now(UTC)
 
 
 def _output_root() -> Path:

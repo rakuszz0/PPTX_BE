@@ -1,5 +1,5 @@
 from uuid import uuid4
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import List
 
 from fastapi import APIRouter, HTTPException, Depends, status
@@ -27,8 +27,8 @@ async def create_course(payload: CourseCreate, db: Session = Depends(get_db)) ->
         source_url=url,
         project_id=payload.project_id,
         status="CREATED",
-        created_at=datetime.utcnow(),
-        updated_at=datetime.utcnow(),
+        created_at=datetime.now(UTC),
+        updated_at=datetime.now(UTC),
     )
     db.add(course)
     db.commit()

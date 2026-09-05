@@ -102,3 +102,51 @@ def invalidate_token(token: str):
     if token in tokens:
         del tokens[token]
         _save_tokens(tokens)
+
+
+def get_or_create_oauth_user(
+    provider: str,
+    provider_user_id: str,
+    email: str,
+    display_name: Optional[str] = None,
+    role: str = "editor",
+) -> dict:
+    """Cari user yang sudah terikat provider OAuth, atau buat baru.
+
+    `email` dipakai sebagai username utama (jika belum ada user dengan email
+    tersebut). Jika user dengan username=email sudah ada, tambahkan mapping
+    provider ke user itu saja.
+    """
+    users = _users()
+    oauth_key = f"{provider}:::{provider_user_id}"
+
+    # 1. Cari user yang sudah memiliki mapping provider ini
+    for uname, u in users.items():
+        provs = u.get("oauth_providers") or {}
+        if provs.get(provider) == provider_user_id:
+            return {k: v for k, v in u.items() if k != "password_hash"}
+
+    # 2. Cari user dengan username == email (sudah punya akun email/password)
+    username = email.lower().strip()
+    existing = users.get(username)
+    if existing:
+        existing.setdefault("oauth_providers", {})[provider] = provider_user_id
+        if not existing.get("display_name") and display_name:
+            existing["display_name"] = display_name
+        users[username] = existing
+        _save_users(users)
+        return {k: v for k, v in existing.items() if k != "password_hash"}
+
+    # 3. User benar-benar baru: buat tanpa password (hanya bisa login via OAuth)
+    uid = f"u_{secrets.token_hex(6)}"
+    obj = {
+        "id": uid,
+        "username": username,
+        "display_name": display_name or email.split("@")[0],
+        "role": role,
+        "password_hash": None,
+        "oauth_providers": {provider: provider_user_id},
+    }
+    users[username] = obj
+    _save_users(users)
+    return {k: v for k, v in obj.items() if k != "password_hash"}

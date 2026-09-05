@@ -1,7 +1,8 @@
 from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, Response as PlainResponse
 from contextlib import asynccontextmanager
+import re
 
 from app.core.config import get_settings
 from app.core.logging import setup_logging
@@ -11,6 +12,10 @@ from app.database.session import init_db
 from app.api.v1 import health, courses, modules, presentations, slides, jobs, qa
 from app.api.v1 import auth
 from app.api import websocket
+
+
+# Regex yang selalu diizinkan di dev mode: setiap port localhost / 127.0.0.1
+_LOCALHOST_REGEX = re.compile(r"^https?://(localhost|127\.0\.0\.1)(:\d+)?$", re.IGNORECASE)
 
 
 @asynccontextmanager
@@ -33,27 +38,73 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
+    # Starlette/Fastapi CORSMiddleware di versi lama **tidak menerima callable** di
+    # allow_origins (hanya list[str]). Jadi kita gunakan 2 strategi:
+    #   1. allow_origins = list yang dikasih user (exact match + "*")
+    #   2. allow_origin_regex = localhost/127.0.0.1 port bebas (selalu aktif di dev)
+    # Jika list user sudah "*" → regex dimatikan karena "*" sudah menerima sembarang.
+    use_wildcard = settings.cors_origins_list == ["*"]
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.cors_origins_list or ["*"],
-        allow_credentials=True,
+        allow_origins=settings.cors_origins_list,
+        allow_origin_regex=None if use_wildcard else _LOCALHOST_REGEX.pattern,
+        allow_credentials=False if use_wildcard else True,  # "*" + allow_credentials tidak diijinkan CORS spec
         allow_methods=["*"],
         allow_headers=["*"],
         expose_headers=["X-Request-Id", "Content-Disposition", "Content-Length"],
     )
 
     @app.middleware("http")
-    async def request_id_and_logging_middleware(request: Request, call_next):
+    async def request_id_and_cors_middleware(request: Request, call_next):
         request_id = request.headers.get("X-Request-Id") or generate_request_id()
         request.state.request_id = request_id
+
+        # Backup handler preflight / CORS headers: kalau origin user adalah localhost
+        # tapi tidak tertangkap CORSMiddleware, kita inject header secara manual.
+        origin = request.headers.get("origin")
+        allowed = origin and (
+            use_wildcard or settings.is_cors_origin_allowed(origin) or bool(_LOCALHOST_REGEX.match(origin))
+        )
+
+        # Tangani OPTIONS preflight yang gagal di CORSMiddleware karena credentials + origin list
+        if request.method == "OPTIONS" and allowed and origin:
+            headers = {
+                "Access-Control-Allow-Origin": origin,
+                "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,PATCH,OPTIONS",
+                "Access-Control-Allow-Headers": request.headers.get(
+                    "access-control-request-headers", "Content-Type,Authorization,Accept,X-Requested-With"
+                ),
+                "Access-Control-Allow-Credentials": "true" if not use_wildcard else "false",
+                "Access-Control-Max-Age": "86400",
+                "X-Request-Id": request_id,
+            }
+            return PlainResponse(status_code=204, headers=headers)
+
         try:
             response: Response = await call_next(request)
         except Exception as exc:
             if isinstance(exc, AppError):
                 body = exc.to_dict(request_id)
-                return JSONResponse(status_code=exc.status_code, content=body, headers={"X-Request-Id": request_id})
-            body = AppError(str(exc)).to_dict(request_id)
-            return JSONResponse(status_code=500, content=body, headers={"X-Request-Id": request_id})
+                resp = JSONResponse(status_code=exc.status_code, content=body)
+            else:
+                body = AppError(str(exc)).to_dict(request_id)
+                resp = JSONResponse(status_code=500, content=body)
+            if allowed and origin:
+                resp.headers["Access-Control-Allow-Origin"] = origin
+                if not use_wildcard:
+                    resp.headers["Access-Control-Allow-Credentials"] = "true"
+                resp.headers["Vary"] = "Origin"
+            resp.headers["X-Request-Id"] = request_id
+            return resp
+
+        # Inject CORS headers ke response normal (menambahkan jika CORSMiddleware lewat)
+        if allowed and origin:
+            acao = response.headers.get("access-control-allow-origin")
+            if not acao or acao == "*":
+                response.headers["Access-Control-Allow-Origin"] = origin
+                if not use_wildcard:
+                    response.headers["Access-Control-Allow-Credentials"] = "true"
+            response.headers["Vary"] = "Origin"
         response.headers["X-Request-Id"] = request_id
         return response
 

@@ -3,11 +3,15 @@ from typing import List
 from uuid import uuid4
 import re
 
+import httpx
+from bs4 import BeautifulSoup
+
 from app.domain.courses.models import (
     CourseDocument, CourseModule, ContentSection, ContentType, RegType,
 )
 from app.core.errors import ExtractionError
 from app.core.logging import get_logger
+from app.services.ai.article_agent import ArticleDescriptionAgent
 
 from .base import CourseExtractor, _cache_get, _cache_put, _sha256, validate_url
 
@@ -31,11 +35,101 @@ class WizapeExtractor(CourseExtractor):
                 except Exception as exc:
                     logger.warning("cache invalid, ignoring: %s", exc)
 
-        course = self._build_demo_course(url)
+        # Keep the deterministic fixture used by automated tests. Every real
+        # HTTP(S) article is fetched and parsed below.
+        course = self._build_demo_course(url) if ".example" in url else self._extract_article(url)
 
         if self.use_cache:
             _cache_put(cache_key, course.to_dict())
         return course
+
+    def _extract_article(self, url: str) -> CourseDocument:
+        try:
+            with httpx.Client(timeout=self.timeout_s, follow_redirects=True, headers={
+                "User-Agent": "WizapePresentationBot/1.0 (+content-to-presentation)"
+            }) as client:
+                response = client.get(url)
+                response.raise_for_status()
+                content_type = response.headers.get("content-type", "").lower()
+                if "html" not in content_type:
+                    raise ExtractionError("Source URL must return an HTML article")
+                if len(response.content) > 3_000_000:
+                    raise ExtractionError("Article is too large to process")
+                html = response.text
+                source_url = str(response.url)
+        except httpx.HTTPError as exc:
+            raise ExtractionError(f"Unable to fetch article: {exc}") from exc
+
+        soup = BeautifulSoup(html, "html.parser")
+        for node in soup(["script", "style", "noscript", "nav", "footer", "header", "aside", "form", "svg"]):
+            node.decompose()
+        root = soup.find("article") or soup.find("main") or soup.body
+        if root is None:
+            raise ExtractionError("Article HTML has no readable body")
+
+        title = self._clean_text((soup.find("meta", property="og:title") or {}).get("content", ""))
+        if not title:
+            heading = root.find(["h1", "h2"])
+            title = self._clean_text(heading.get_text(" ", strip=True) if heading else soup.title.string if soup.title else "")
+        title = title or "Untitled article"
+        description_tag = soup.find("meta", attrs={"name": "description"})
+        sections = self._article_sections(root)
+        if not sections:
+            raise ExtractionError("No readable article text was found")
+
+        ai = ArticleDescriptionAgent().describe(title, sections)
+        course_id = f"course_{_sha256(source_url)[:12]}"
+        modules = []
+        for number, section in enumerate(sections, start=1):
+            summary = next((x.get("summary", "") for x in ai["sections"] if x.get("title") == section["title"]), "")
+            text = section["text"]
+            modules.append(CourseModule(
+                id=f"mod_{course_id}_{number:03d}",
+                module_number=number,
+                title=section["title"],
+                summary=summary or text[:400],
+                sections=[ContentSection(
+                    id=f"section_{number:03d}", title=section["title"], text=text,
+                    content_type=ContentType.SECTION, source_ref=source_url, order=number,
+                )],
+                source_url=source_url,
+                word_count=len(text.split()),
+                metadata={"source_heading": section["title"]},
+            ))
+        return CourseDocument(
+            id=course_id, title=title, source_url=source_url,
+            description=ai["description"] or self._clean_text(description_tag.get("content", "") if description_tag else ""),
+            modules=modules, metadata={"source": "article_extractor", "description_agent": ai["agent"], "audience": ai["audience"]},
+        )
+
+    def _article_sections(self, root) -> list[dict[str, str]]:
+        sections: list[dict[str, str]] = []
+        current_title = "Ringkasan artikel"
+        current_parts: list[str] = []
+        for node in root.find_all(["h1", "h2", "h3", "p", "li"]):
+            text = self._clean_text(node.get_text(" ", strip=True))
+            if not text:
+                continue
+            if node.name in ("h1", "h2", "h3"):
+                if current_parts:
+                    sections.append({"title": current_title, "text": "\n\n".join(current_parts)})
+                current_title, current_parts = text[:300], []
+            elif len(text) >= 30:
+                current_parts.append(text)
+        if current_parts:
+            sections.append({"title": current_title, "text": "\n\n".join(current_parts)})
+        # Avoid fragmented decks by combining very short neighbouring sections.
+        combined: list[dict[str, str]] = []
+        for section in sections:
+            if combined and len(section["text"].split()) < 80:
+                combined[-1]["text"] += "\n\n" + section["text"]
+            else:
+                combined.append(section)
+        return combined[:20]
+
+    @staticmethod
+    def _clean_text(value: str) -> str:
+        return re.sub(r"\s+", " ", value or "").strip()
 
     def _build_demo_course(self, url: str) -> CourseDocument:
         course_id = f"course_{_sha256(url)[:12]}"

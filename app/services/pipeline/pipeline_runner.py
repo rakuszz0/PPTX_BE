@@ -291,9 +291,9 @@ def _persist_course_modules(session, course: Course, course_doc: CourseDocument)
             module_number=m.module_number,
             title=m.title,
             summary=m.summary,
-            content={"sections": [s.model_dump(mode="json") for s in m.sections]},
+            content={"sections": [s.model_dump(mode="json") for s in m.sections], "metadata": m.metadata},
             raw_html=None,
-            cleaned_content={"sections": [s.model_dump(mode="json") for s in m.sections]},
+            cleaned_content={"sections": [s.model_dump(mode="json") for s in m.sections], "metadata": m.metadata},
             source_url=m.source_url,
             status="EXTRACTED",
             created_at=_now(),
@@ -329,6 +329,7 @@ def _db_module_to_domain(mod: Module) -> CourseModule:
         sections=sections,
         source_url=mod.source_url,
         word_count=word_count,
+        metadata=((mod.cleaned_content or mod.content or {}).get("metadata") or {}),
     )
 
 

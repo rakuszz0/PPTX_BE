@@ -116,6 +116,15 @@ class PresentationResponse(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 
+class PresentationDocumentResponse(PresentationResponse):
+    document_json: Dict[str, Any]
+
+
+class PresentationUpdateRequest(BaseModel):
+    title: Optional[str] = Field(default=None, min_length=1, max_length=500)
+    document_json: Dict[str, Any]
+
+
 class SlideResponse(BaseModel):
     id: str
     presentation_id: str
@@ -155,7 +164,9 @@ class QAResponse(BaseModel):
 
 
 class ExportRequest(BaseModel):
-    format: Literal["pptx", "pdf", "png"] = "pptx"
+    # The renderer currently produces PowerPoint files only. Keeping this
+    # explicit prevents a caller from receiving a PPTX mislabeled as PDF/PNG.
+    format: Literal["pptx"] = "pptx"
 
 
 class EventType(str, Enum):

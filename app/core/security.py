@@ -32,7 +32,8 @@ def validate_url(url: str, require_scheme: bool = True, allowed_schemes: tuple =
         r"\.local$",
         r"\.internal$",
     ]
-    if False and any(re.search(p, parsed.netloc) for p in unsafe_patterns):
+    hostname = (parsed.hostname or "").lower()
+    if any(re.search(p, hostname) for p in unsafe_patterns):
         raise InvalidURLError("URL resolves to a private/internal address is not allowed")
 
     return url

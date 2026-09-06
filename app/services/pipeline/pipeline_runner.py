@@ -97,12 +97,12 @@ async def run_job_pipeline(job_id: str) -> None:
                 raise NotFoundError(f"Course {job.course_id} not found")
 
             jpm.set_status(JobStatus.EXTRACTING, stage="wizape_extract", progress=5)
-            source_url = course.source_url or "https://wizape.example/course/medical-regulation"
+            source_url = course.source_url or "https://en.wikipedia.org/wiki/Photosynthesis"
             try:
                 extractor = WizapeExtractor()
                 course_doc = extractor.extract(source_url)
             except Exception as exc:
-                raise ExtractionError(f"Wizape extraction failed: {exc}")
+                raise ExtractionError(f"Article extraction failed: {exc}")
 
             jpm.set_status(JobStatus.EXTRACTING, stage="persist_course", progress=10)
             _persist_course_modules(jpm.session, course, course_doc)

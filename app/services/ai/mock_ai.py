@@ -239,7 +239,7 @@ class MockSlideArchitect(AISlideArchitect):
             components=[
                 {"type": "HEADING", "area": "title", "content": {"text": "Kepatuhan Regulasi untuk Perangkat Medis"}},
                 {"type": "SUBTITLE", "area": "subtitle", "content": {"text": f"{module.title} \u2022 Modul 1 \u2022 Dikti & Klinis"}},
-                {"type": "BADGE", "area": "meta", "content": {"text": "WIZAPE \u2022 Medical Theme", "variant": "pill"}},
+                {"type": "BADGE", "area": "meta", "content": {"text": "SlideForge \u2022 Medical Theme", "variant": "pill"}},
             ],
             source_references=["module_01.title"],
         ))
@@ -445,7 +445,7 @@ class MockSlideArchitect(AISlideArchitect):
                     {"type": "CARD", "area": "point_2", "variant": "card_primary",
                      "content": {"heading": "Next Step", "text": "Pelajari Modul 2: Pedoman Teknis Klasifikasi dan Alur Registrasi yang lebih mendalam."}},
                     {"type": "CARD", "area": "point_3", "variant": "card_teal",
-                     "content": {"heading": "Kontak", "text": "Tim WIZAPE siap membantu pembahasan kasus dan pendalaman lebih lanjut."}},
+                     "content": {"heading": "Kontak", "text": "Tim SlideForge siap membantu pembahasan kasus dan pendalaman materi lebih lanjut."}},
                 ],
             ))
 

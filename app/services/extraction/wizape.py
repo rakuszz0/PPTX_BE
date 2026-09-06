@@ -46,7 +46,7 @@ class WizapeExtractor(CourseExtractor):
     def _extract_article(self, url: str) -> CourseDocument:
         try:
             with httpx.Client(timeout=self.timeout_s, follow_redirects=True, headers={
-                "User-Agent": "WizapePresentationBot/1.0 (+content-to-presentation)"
+                "User-Agent": "SlideForgeBot/1.0 (+article-to-presentation)"
             }) as client:
                 response = client.get(url)
                 response.raise_for_status()
@@ -140,7 +140,7 @@ class WizapeExtractor(CourseExtractor):
             source_url=url,
             description="Kursus komprehensif tentang regulasi perangkat medis di Indonesia: definisi, klasifikasi risiko, kerangka hukum, alur registrasi, ISO 13485, dan kewajiban pasca pemasaran.",
             modules=modules,
-            author="WIZAPE Academy \u2014 Tim Kedokteran & Regulatori",
+            author="SlideForge Academy — Tim Kurikulum Pendidikan",
             metadata={"source": "wizape_extractor_mock", "modules_detected": len(modules)},
         )
 

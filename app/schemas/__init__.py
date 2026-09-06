@@ -24,7 +24,7 @@ class HealthResponse(BaseModel):
 
 
 class CourseCreate(BaseModel):
-    source_url: str = Field(..., max_length=2048, description="WIZAPE course URL")
+    source_url: str = Field(..., max_length=2048, description="Article or course URL to process (any public URL)")
     project_id: Optional[str] = None
     title: Optional[str] = None
 

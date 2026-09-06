@@ -32,8 +32,8 @@ async def lifespan(app: FastAPI):
 def create_app() -> FastAPI:
     settings = get_settings()
     app = FastAPI(
-        title="Wizape Presentation Studio API",
-        description="AI-Native Backend for Educational PowerPoint Generation",
+        title="SlideForge Studio API",
+        description="AI-Native Backend for PowerPoint Generation — forge beautiful educational presentations from any article URL.",
         version="0.1.0",
         lifespan=lifespan,
     )
@@ -130,7 +130,7 @@ def create_app() -> FastAPI:
 
     @app.get("/")
     async def root():
-        return {"service": "wizape-presentation-studio", "version": "0.1.0", "docs": "/docs"}
+        return {"service": "slideforge-studio", "version": "0.1.0", "docs": "/docs"}
 
     return app
 

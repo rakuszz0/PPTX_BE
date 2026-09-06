@@ -166,13 +166,13 @@ def cmd_health(args) -> int:
 
 def main() -> None:
     import argparse
-    parser = argparse.ArgumentParser(prog="wizape-presentation",
-                                     description="Wizape Presentation Studio Backend")
+    parser = argparse.ArgumentParser(prog="slideforge",
+                                     description="SlideForge Studio Backend — forge beautiful educational presentations from any article URL.")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
     p_demo = sub.add_parser("demo", help="Run end-to-end demo pipeline (no server required)")
-    p_demo.add_argument("--url", default="https://wizape.example/course/medical-regulasi/modules=10",
-                        help="WIZAPE course URL")
+    p_demo.add_argument("--url", default="https://en.wikipedia.org/wiki/Photosynthesis",
+                        help="Article / course URL to process")
     p_demo.add_argument("--module", type=int, default=1)
     p_demo.add_argument("--min-slides", type=int, default=10)
     p_demo.add_argument("--max-slides", type=int, default=12)
